@@ -31,13 +31,6 @@ jobs:
         continue-on-error: true
         run: |
           ./k6 run --out json=my_test_result.json k6Performance.js
-      # Runs k6 performance tests
-      #- name: Run local k6 test
-      #  continue-on-error: true
-      #  uses: k6io/action@v0.1
-      #  with:
-      #    filename: k6Performance.js
-      #    flags: --out json=my_test_result.json
       
       # Debug generated file
       - name: debug Xray xml report
